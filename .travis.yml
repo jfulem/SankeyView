@@ -1,0 +1,17 @@
+sudo: false
+
+language: java
+
+jdk:
+  - oraclejdk8
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.m2
+
+script:
+  - mvn clean compile -Dmaven.test.skip=true
+
+after_success:
+  - mvn clean test jacoco:report coveralls:report
