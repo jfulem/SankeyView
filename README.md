@@ -1,2 +1,2 @@
 # SankeyView
-JavaFX Sankey diagram tool 
+Java FX Sankey diagram tool 
